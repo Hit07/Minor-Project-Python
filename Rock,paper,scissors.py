@@ -2,6 +2,7 @@ import random
 choice = int(input("What do you choose?Type 0 for Rock, 1 for for Paper or 2 for Scissors."))
 comp_choice = random.randint(0,2)
 rock = '''
+
     _______
 ---'   ____)
       (_____)
