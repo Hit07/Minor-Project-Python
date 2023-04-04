@@ -1,0 +1,35 @@
+# Look up "Open Trivia Database" for more question
+
+
+question_data = [
+    {"category": "History", "type": "boolean", "difficulty": "easy",
+     "question": "The Tiananmen Square protests of 1989 were held in Hong Kong.",
+     "correct_answer": "False", "incorrect_answers": ["True"]},
+    {"category": "Entertainment: Video Games", "type": "boolean", "difficulty": "easy",
+     "question": "The Mann Co. Store from Team Fortress 2 has the slogan &quot;We hire mercenaries and get in fights&quot;.",
+     "correct_answer": "False", "incorrect_answers": ["True"]},
+    {"category": "Entertainment: Video Games", "type": "boolean", "difficulty": "medium",
+     "question": "The first Maxis game to feature the fictional language &quot;Simlish&quot; was The Sims (2000).",
+     "correct_answer": "False", "incorrect_answers": ["True"]},
+    {"category": "Entertainment: Video Games", "type": "boolean", "difficulty": "hard",
+     "question": "In the game &quot;Melty Blood Actress Again Current Code&quot;, you can enter Blood Heat mode in Half Moon style.",
+     "correct_answer": "False", "incorrect_answers": ["True"]},
+    {"category": "Science: Computers", "type": "boolean", "difficulty": "medium",
+     "question": "The last Windows operating system to be based on the Windows 9x kernel was Windows 98.",
+     "correct_answer": "False", "incorrect_answers": ["True"]},
+    {"category": "Entertainment: Film", "type": "boolean", "difficulty": "medium",
+     "question": "Joan Cusack starred in the 2009 disaster movie, &quot;2012&quot;.",
+     "correct_answer": "False", "incorrect_answers": ["True"]},
+    {"category": "Science: Mathematics", "type": "boolean", "difficulty": "medium",
+     "question": "The set of all algebraic numbers is countable.",
+     "correct_answer": "True", "incorrect_answers": ["False"]},
+    {"category": "Entertainment: Books", "type": "boolean", "difficulty": "easy",
+     "question": "&quot;Green Eggs and Ham&quot; consists of only 50 different words.",
+     "correct_answer": "True", "incorrect_answers": ["False"]},
+    {"category": "Entertainment: Music", "type": "boolean", "difficulty": "medium",
+     "question": "Dave Grohl recorded the Foo Fighters&#039; debut, &quot;Foo Fighters,&quot; by himself.",
+     "correct_answer": "True", "incorrect_answers": ["False"]},
+    {"category": "Animals", "type": "boolean", "difficulty": "easy",
+     "question": "The freshwater amphibian, the Axolotl, can regrow it&#039;s limbs.",
+     "correct_answer": "True", "incorrect_answers": ["False"]}
+]
