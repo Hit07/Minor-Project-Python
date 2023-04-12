@@ -1,20 +1,20 @@
 import json
 import requests
 import pandas as pd
+import os
 from twilio.rest import Client
 
 # Download the helper library from https://www.twilio.com/docs/python/instal
 # Set environment variables for your credentials
 # Read more at http://twil.io/secure
-API_KEY = '0b042412XX2XXXXXXXX231204'
-account_sid = "AC44fcXXXXXXXXXXXX9508"
-auth_token = "9150a47XXXXXXXXXX0b71890"
+API_KEY = os.environ.get("OWN_API_KEY")
+account_sid = "AC44fc8924d646e84c515c4e706c509508"
+auth_token = os.environ.get("OWN_AUTH_TOKEN")
 
 parameter = {
     "key": API_KEY,
-    "q": "Bern",
+    "q": "London",
     "days": 15,
-    "exclude": "hourly"
 }
 response = requests.get(
     "https://api.weatherapi.com/v1/forecast.json", params=parameter)
