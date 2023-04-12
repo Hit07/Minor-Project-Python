@@ -1,7 +1,7 @@
 # =========================================SMTP module=============================================
 # import smtplib
 #
-# my_email = "hiteshnarayana007@gmail.com"
+# my_email = ""
 # password = "kgxwxlnvuhbcujoi"
 #
 # try:
@@ -9,7 +9,7 @@
 #         connection.starttls()
 #         connection.login(user=my_email, password=password)
 #         connection.sendmail(from_addr=my_email,
-#                             to_addrs="unknown.hitman.463@gmail.com",
+#                             to_addrs="",
 #                             msg="Subject:hello\n\nThis message was sent using smtplib module")
 #
 #     print("Email sent successfully!")
@@ -56,7 +56,7 @@ data = pd.read_csv("birthdays.csv")
 date = dt.datetime.now()
 day = date.day
 month = date.month
-username = "hiteshnarayana007@gmail.com"
+username = ""
 password = "kgxwxlnvuhbcujoi"
 # print(date.day)
 for (index, row) in data.iterrows():

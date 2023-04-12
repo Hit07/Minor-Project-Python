@@ -5,7 +5,7 @@ import time
 
 MY_LAT = -40.7289  # Your latitude
 MY_LONG = -40.7289  # Your longitude
-my_email = 'unknown.hitman.463@gmail.com'
+my_email = ''
 password = "ruiqfmdbmldgqynb"
 
 
@@ -51,7 +51,7 @@ while True:
                 connection.starttls()
                 connection.login(user=my_email, password=password)
                 connection.sendmail(from_addr=my_email,
-                                    to_addrs="hiteshnovember@gmail.com",
+                                    to_addrs="",
                                     msg=f"Subject:LOOK UP👆🏻 \n\n ISS is above you in the sky🌌!!")
             print("successful")
         except Exception as e:
