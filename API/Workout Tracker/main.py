@@ -50,3 +50,4 @@ for exc in data['exercises']:
     response = requests.post(url=workout_post_endpoint,headers=header, json=param)
     response.raise_for_status()
     print(response.text)
+
