@@ -28,7 +28,7 @@ while game_is_on:
     answer_state = screen.textinput(title=f"{i}/50 Guess the state", prompt="What's another state name").title()
     if answer_state == "Exit":
         break
-    if answer_state in states_list.state.to_list():
+    if answer_state in learn_states_list:
         t = Turtle()
         t.hideturtle()
         t.penup()

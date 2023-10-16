@@ -1,17 +1,19 @@
 # with open("weather_data.csv") as data:
 #     print(data.readlines())
 import csv
+import pandas
 import pandas as pd
 # -------------------------------------------------
-with open("weather_data.csv") as text:
-    data = csv.reader(text)
-    temp = []
-    for row in data:
-        if row[1].isdigit():
-            temp1 = row[1]
-            temp.append(int(temp1))
-    print(temp)
---------------------------------------------------------
+# with open("weather_data.csv") as text:
+#     data = csv.reader(text)
+#     temp = []
+#     for row in data:
+#         # print(row)
+#         if row[1].isdigit():
+#             temp1 = row[1]
+#             temp.append(int(temp1))
+#     print(temp)
+#--------------------------------------------------------
 
 # data = pandas.read_csv("weather_data.csv")
 '''For fetching values from column'''
@@ -28,12 +30,12 @@ with open("weather_data.csv") as text:
 # mon = data[data.day == "Monday"]
 # print(f"{(mon.temp*1.8)+32}")
 '''Creating dataframe from scratch'''
-data_dict = {
-    "students":["Any","James","Angela","Hitesh"],
-    "scores":[76,89,92,99]
-}
-data = pandas.DataFrame(data_dict)
-data.to_csv("data_dict.csv")
+# data_dict = {
+#     "students":["Any","James","Angela","Hitesh"],
+#     "scores":[76,89,92,99]
+# }
+# data = pandas.DataFrame(data_dict)
+# data.to_csv("data_dict.csv")
 
 # -------------------------------------------------------------------
 
@@ -42,9 +44,13 @@ gray_count = len(squirrel_data[squirrel_data["Primary Fur Color"] == "Gray"])
 cinnamon_count = len(squirrel_data[squirrel_data["Primary Fur Color"] == "Cinnamon"])
 black_count = len(squirrel_data[squirrel_data["Primary Fur Color"] == "Black"])
 color_data = {
-    "Fur color":["Gray", "Red", "Black"],
+    "Fur_color":["Gray", "Red", "Black"],
     "Count":[gray_count, cinnamon_count, black_count]
 }
 data = pd.DataFrame(color_data)
 data.to_csv("Fur Color.csv")
-print(data)
+
+# print(data)
+
+# new_data = pd.read_csv("Fur Color.csv")
+# print(new_data)

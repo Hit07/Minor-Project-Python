@@ -1,7 +1,7 @@
 import Caesar_Cipher_art
 
 #TODO: Choice fuction defined
-def choice(direction,):
+def choice(direction):
     if "encode" == direction:
         encrypt(text,shift)
     elif "decode" == direction:
