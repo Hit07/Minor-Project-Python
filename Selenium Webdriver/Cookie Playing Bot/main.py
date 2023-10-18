@@ -59,6 +59,5 @@ def main():
             print(cookie_per_s)
             break
 
-
 if __name__ == "__main__":
     main()
