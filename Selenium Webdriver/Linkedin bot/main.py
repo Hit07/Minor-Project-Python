@@ -4,8 +4,8 @@ from selenium.common import NoSuchElementException
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 
-ACCOUNT_EMAIL = 'hiteshnovember@gmail.com'
-ACCOUNT_PASSWORD = 'Hitesh@7112001'
+ACCOUNT_EMAIL = ''
+ACCOUNT_PASSWORD = ''
 PHONE = "3517181912"
 
 API = (
