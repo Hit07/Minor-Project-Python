@@ -22,6 +22,7 @@ chrome_options.add_experimental_option('detach', True)
 driver = webdriver.Chrome()
 driver.get(API)
 
+
 # Click on sign-in button
 time.sleep(3)
 driver.find_element(By.LINK_TEXT, value="Sign in").click()
