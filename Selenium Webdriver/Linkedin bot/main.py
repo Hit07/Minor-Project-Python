@@ -28,9 +28,9 @@ driver.find_element(By.LINK_TEXT, value="Sign in").click()
 
 # Login
 email = driver.find_element(By.NAME, 'session_key')
-email.send_keys('hiteshnovember@gmail.com')
+email.send_keys('')
 password = driver.find_element(By.NAME, 'session_password')
-password.send_keys('Hitesh@7112001')
+password.send_keys('')
 password.send_keys(Keys.ENTER)
 
 # Confirmation By entering something that verification is complete
