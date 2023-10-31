@@ -93,9 +93,9 @@ for n in range(100):
             match_popup = driver.find_element_by_css_selector(".itsAMatch a")
             match_popup.click()
 
-        # Catches the cases where the "Like" button has not yet loaded, so wait 2 seconds before retrying.
+        # Catches the cases where the "Like" button has not yet loaded
         except NoSuchElementException:
-            sleep(2)
+            sleep(4)
     else:
         count += 1
         print(count)
