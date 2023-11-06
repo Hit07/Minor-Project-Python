@@ -1,36 +1,14 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-
+from internet_speed import InternetSpeed
+from tweet import Tweet
 
 PROMISED_DOWN = 100
 PROMISED_UP = 100
-CHROME_DRIVER_PATH = ''
-# 'https://twitter.com/i/flow/login'
-TWITTER_EMAIL = 'unknown.hitman.463@gmail.com'
-TWITTER_PASSWORD = 'Hitesh@007'
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_experimental_option('detach', True)
-s = Service(CHROME_DRIVER_PATH)
-options = Options()
-options.add_argument("start-maximized")
-
-
-class InternetSpeedTwitterBot:
-
-    def __init__(self, path):
-        self.driver = webdriver.Chrome(service=s, options=options)
-        self.down = 0
-        self.up = 0
-
-    def get_internet_speed(self):
-        pass
-
-    def tweet_at_provider(self):
-        pass
-
-
-obj = InternetSpeedTwitterBot(CHROME_DRIVER_PATH)
+obj = InternetSpeed()
 obj.get_internet_speed()
-obj.tweet_at_provider()
+print(f'Up:{obj.up}\nDown:{obj.down}')
+
+obj_1 = Tweet()
+post = f"Hey Internet Provider, why is my internet speed {obj.down}down/{obj.up}up when I pay for {PROMISED_DOWN}down/{PROMISED_UP}up?"
+obj_1.tweet_at_provider(post)
+print("Tweeted Check your feed!")
