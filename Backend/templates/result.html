@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game Result</title>
+    <style>
+    body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    }
+
+    h1 {
+    text-align: center;
+    color: {% if result == "Too Low, Try again!" or "Too high, Try again!" %}red
+           {% elif result == "You found me!" %}green;
+           {% else %} black {% endif %}
+    }
+
+    img {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    }
+    </style>
+</head>
+<body>
+    <h1>{{result}}</h1>
+    <img src="{{ image }}" alt="Result Image">
+</body>
+</html>
