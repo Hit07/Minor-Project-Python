@@ -30,7 +30,7 @@ def home():
 @server.route("/<int:input_num>")
 def compare(input_num):
     num_choice = random.randint(0, 9)
-    print(num_choice)
+    # print(num_choice)
 
     if num_choice > input_num:
         return render_template('result.html', result='Too Low, Try again!', image=IMG_LOW)
