@@ -42,3 +42,4 @@ def compare(input_num):
 
 if __name__ == '__main__':
     server.run(debug=True)
+
