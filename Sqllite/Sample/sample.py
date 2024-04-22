@@ -58,16 +58,16 @@ with app.app_context():
 #     db.session.commit()
 
 # # READ ---> query all books
-# with app.app_context():
-#     result = db.session.execute(db.select(Book).order_by(Book.id))
-#     all_books = result.scalars()
-#     for book in all_books:
-#         print(f'{book.id}|{book.title}-{book.author}-{book.rating}')
-#
-# # Read A Particular Record By Query
 with app.app_context():
-    book = db.session.execute(db.select(Book).where(Book.id == 1)).scalar()
-    print(f'{book.id}|{book.title}|{book.author}|{book.rating}')
+    result = db.session.execute(db.select(Book).order_by(Book.id))
+    all_books = result.scalars()
+    for book in all_books:
+        print(f'{book.id}|{book.title}-{book.author}-{book.rating}')
+
+# # Read A Particular Record By Query
+# with app.app_context():
+#     book = db.session.execute(db.select(Book).where(Book.id == 1)).scalar()
+#     print(f'{book.title}|{book.author}|{book.rating}')
 
 
 #

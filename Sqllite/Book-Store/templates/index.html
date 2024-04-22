@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Library</title>
+</head>
+<body>
+    <h1>Library Books</h1>
+    <ol>
+        {% for book in books %}
+    <li>
+            <span> {{ book.title }} - {{ book.author }} - {{ book.rating }} </span>
+            <form action="{{ url_for('delete', id=book.id) }}" method="POST" style="display: inline">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit">Delete</button>
+            </form>
+          <form action="{{ url_for('edit', id=book.id) }}" method="GET" style="display: inline;">
+                    <input type="hidden" name="id" value="{{ book.id }}">
+                    <button type="submit">Edit Rating</button>
+          </form>
+    </li>
+        {% endfor %}
+    </ol>
+
+    <a href="{{ url_for('add') }}">Add New Book</a>
+</body>
+</html>
