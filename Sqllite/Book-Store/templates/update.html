@@ -1,20 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Edit Book</title>
-</head>
+{% extends 'base.html' %}
 <body>
-    <h1>Edit Book</h1>
-    <form action="{{ url_for('edit') }}" method="POST">
-        <p>Current Title: {{ book.title }}</p>
-        <input type="text" name="title" placeholder="New Title"><br>
-        <p>Current Author: {{ book.author }}</p>
-        <input type="text" name="author" placeholder="New Author"><br>
-        <p>Current Rating: {{ book.rating }}</p>
-        <input type="text" name="rating" placeholder="New Rating"><br>
-        <input type="hidden" name="id" value="{{ book.id }}">
-        <button type="submit">Update Book</button>
-    </form>
+    <div class="container my-5">
+        <h1 class="mb-4">Edit Book</h1>
+        <form action="{{ url_for('edit') }}" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <p><strong>Current Title:</strong> {{ book.title }}</p>
+                <label for="title" class="form-label">New Title:</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="New Title">
+            </div>
+
+            <div class="mb-3">
+                <p><strong>Current Author:</strong> {{ book.author }}</p>
+                <label for="author" class="form-label">New Author:</label>
+                <input type="text" class="form-control" id="author" name="author" placeholder="New Author">
+            </div>
+
+            <div class="mb-3">
+                <p><strong>Current Rating:</strong> {{ book.rating }}</p>
+                <label for="rating" class="form-label">New Rating:</label>
+                <input type="text" class="form-control" id="rating" name="rating" placeholder="New Rating">
+            </div>
+
+            <input type="hidden" name="id" value="{{ book.id }}">
+            <button type="submit" class="btn btn-primary">Update Book</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

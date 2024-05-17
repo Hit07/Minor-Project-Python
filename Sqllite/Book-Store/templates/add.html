@@ -1,22 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Add Book</title>
-</head>
+{% include "header.html" %}
 <body>
-    <h1>Add Book</h1>
-    <form action="{{ url_for('add') }}" method="POST">
-        <label for="title">Book Name:</label><br>
-        <input type="text" id="title" name="title" required><br><br>
+    <div class="container my-5">
+        <h1 class="mb-4">Add Book</h1>
+        <form action="{{ url_for('add') }}" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="title" class="form-label">Book Name:</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+                <div class="invalid-feedback">
+                    Please enter the book name.
+                </div>
+            </div>
 
-        <label for="author">Book Author:</label><br>
-        <input type="text" id="author" name="author" required><br><br>
+            <div class="mb-3">
+                <label for="author" class="form-label">Book Author:</label>
+                <input type="text" class="form-control" id="author" name="author" required>
+                <div class="invalid-feedback">
+                    Please enter the author's name.
+                </div>
+            </div>
 
-        <label for="rating">Rating:</label><br>
-        <input type="text" id="rating" name="rating" required><br><br>
+            <div class="mb-3">
+                <label for="rating" class="form-label">Rating:</label>
+                <input type="text" class="form-control" id="rating" name="rating" required>
+                <div class="invalid-feedback">
+                    Please enter a rating.
+                </div>
+            </div>
 
-        <button type="submit">Add Book</button>
-    </form>
+            <button type="submit" class="btn btn-primary">Add Book</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // Bootstrap validation script
+        (function () {
+            'use strict'
+
+            var forms = document.querySelectorAll('.needs-validation')
+
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
 </body>
 </html>

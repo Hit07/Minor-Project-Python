@@ -1,27 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Library</title>
-</head>
+{% include "header.html" %}
 <body>
-    <h1>Library Books</h1>
-    <ol>
-        {% for book in books %}
-    <li>
-            <span> {{ book.title }} - {{ book.author }} - {{ book.rating }} </span>
-            <form action="{{ url_for('delete', id=book.id) }}" method="POST" style="display: inline">
-                <input type="hidden" name="_method" value="DELETE">
-                <button type="submit">Delete</button>
-            </form>
-          <form action="{{ url_for('edit', id=book.id) }}" method="GET" style="display: inline;">
-                    <input type="hidden" name="id" value="{{ book.id }}">
-                    <button type="submit">Edit Rating</button>
-          </form>
-    </li>
-        {% endfor %}
-    </ol>
+    <div class="container my-5">
+        <h1 class="mb-4">Library Books</h1>
+        <ol class="list-group list-group-numbered">
+            {% for book in books %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>
+                        <strong>{{ book.title }}</strong> by {{ book.author }} - <span class="badge bg-info text-dark">{{ book.rating }}</span>
+                    </span>
+                    <div>
+                        <form action="{{ url_for('delete', id=book.id) }}" method="POST" class="d-inline">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                        <form action="{{ url_for('edit', id=book.id) }}" method="GET" class="d-inline">
+                            <input type="hidden" name="id" value="{{ book.id }}">
+                            <button type="submit" class="btn btn-warning btn-sm">Edit Rating</button>
+                        </form>
+                    </div>
+                </li>
+            {% endfor %}
+        </ol>
 
-    <a href="{{ url_for('add') }}">Add New Book</a>
+        <a href="{{ url_for('add') }}" class="btn btn-primary mt-3">Add New Book</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
