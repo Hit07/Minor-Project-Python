@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="books-collection [2]">
+<dataSource name="cafes ">
   <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.52">
     <root id="1">
       <ServerVersion>3.45.1</ServerVersion>
@@ -499,7 +499,7 @@
     <routine id="190" parent="1" name="fts5"/>
     <schema id="191" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-04-15.01:32:23</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-05-23.06:22:31</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="192" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1590,60 +1590,92 @@
     <argument id="554" parent="190">
       <Position>1</Position>
     </argument>
-    <table id="555" parent="191" name="book"/>
+    <table id="555" parent="191" name="cafe"/>
     <table id="556" parent="191" name="sqlite_master">
       <System>1</System>
     </table>
     <column id="557" parent="555" name="id">
       <DasType>INTEGER|0s</DasType>
-      <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="558" parent="555" name="title">
+    <column id="558" parent="555" name="name">
       <DasType>VARCHAR(250)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="559" parent="555" name="author">
-      <DasType>VARCHAR(250)|0s</DasType>
+    <column id="559" parent="555" name="map_url">
+      <DasType>VARCHAR(500)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="560" parent="555" name="rating">
-      <DasType>FLOAT|0s</DasType>
+    <column id="560" parent="555" name="img_url">
+      <DasType>VARCHAR(500)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="561" parent="555" name="sqlite_autoindex_book_1">
-      <ColNames>title</ColNames>
+    <column id="561" parent="555" name="location">
+      <DasType>VARCHAR(250)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="562" parent="555" name="has_sockets">
+      <DasType>BOOLEAN|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="563" parent="555" name="has_toilet">
+      <DasType>BOOLEAN|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="564" parent="555" name="has_wifi">
+      <DasType>BOOLEAN|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="565" parent="555" name="can_take_calls">
+      <DasType>BOOLEAN|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="566" parent="555" name="seats">
+      <DasType>VARCHAR(250)|0s</DasType>
+      <Position>10</Position>
+    </column>
+    <column id="567" parent="555" name="coffee_price">
+      <DasType>VARCHAR(250)|0s</DasType>
+      <Position>11</Position>
+    </column>
+    <index id="568" parent="555" name="sqlite_autoindex_cafe_1">
+      <ColNames>name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <key id="562" parent="555">
+    <key id="569" parent="555">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="563" parent="555">
-      <ColNames>title</ColNames>
-      <UnderlyingIndexName>sqlite_autoindex_book_1</UnderlyingIndexName>
+    <key id="570" parent="555">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_cafe_1</UnderlyingIndexName>
     </key>
-    <column id="564" parent="556" name="type">
+    <column id="571" parent="556" name="type">
       <DasType>TEXT|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="565" parent="556" name="name">
+    <column id="572" parent="556" name="name">
       <DasType>TEXT|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="566" parent="556" name="tbl_name">
+    <column id="573" parent="556" name="tbl_name">
       <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="567" parent="556" name="rootpage">
+    <column id="574" parent="556" name="rootpage">
       <DasType>INT|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="568" parent="556" name="sql">
+    <column id="575" parent="556" name="sql">
       <DasType>TEXT|0s</DasType>
       <Position>5</Position>
     </column>
