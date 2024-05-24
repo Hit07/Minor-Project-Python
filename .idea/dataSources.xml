@@ -8,11 +8,11 @@
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/Sqllite/books-collection.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="books-collection [2]" uuid="93079cea-2eb6-4376-bb86-ef5969db5b0e">
+    <data-source source="LOCAL" name="cafes " uuid="847b31b1-de1e-42e8-a196-473ecef31bda">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/Sqllite/instance/books-collection.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/POSTMAN/RemoteWorkCafe-api/instance/cafes.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>

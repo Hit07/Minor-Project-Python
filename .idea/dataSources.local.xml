@@ -13,7 +13,7 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="books-collection [2]" uuid="93079cea-2eb6-4376-bb86-ef5969db5b0e">
+    <data-source name="cafes " uuid="847b31b1-de1e-42e8-a196-473ecef31bda">
       <database-info product="SQLite" version="3.45.1" jdbc-version="4.2" driver-name="SQLite JDBC" driver-version="3.45.1.0" dbms="SQLITE" exact-version="3.45.1" exact-driver-version="3.45">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
