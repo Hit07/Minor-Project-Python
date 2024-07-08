@@ -6,7 +6,6 @@ from morse import Morse_Code
 # translated_string = [Morse_Code.get(_) for _ in string]
 # translated_string = ''.join(translated_string)
 
-
 strings = input()
 params = {
     'text': strings
